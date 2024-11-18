@@ -1,4 +1,4 @@
-# Green-red-ratio
+# GreenLeafVI
 Repository for the FIJI GreenLeafVI plugin which aims to extract RGB data from imaged plant tissue to estimate the chlorophyll content using different vegetation indices.
 
 ## Installation of GreenLeafVI
