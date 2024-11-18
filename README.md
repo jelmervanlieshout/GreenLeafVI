@@ -42,6 +42,12 @@ To accurately measure the mean RGB values for the desired objects, it is recomme
 ### Vegetation index extraction
 The final step includes splitting the RGB image into its three channels and selecting the region-of-interest (roi), based on the object's blue channel value. Subsequently, the **mean grey value** is extracted for each object in each channel individually. These grey values are entered in a table with a number of vegetation indices and the x and y coördinates of each object in a tidy format. The table is opened within FIJI and saved in the input directory as a *.csv* format.
 
+#### Step-by-step Vegetation Index extraction
+1. **File extension**: Select the file extension of your input images (This is case-sensitive).
+2. **Background value (8-bit)**: Select the minimum grey value of your object blue channel (if segmented set at 1).
+3. **Max intensity value (8-bit)**: Select the maximum grey value of your object blue channel (if segmented set at 255).
+4. **Minimum object size**: Define the minimum size of your object in pixels.
+
 #### Overview Vegetation index output
 |Column Name|Definition*|
 |-----------|----------|
