@@ -4,12 +4,12 @@ Repository for the FIJI GreenLeafVI plugin which aims to extract RGB data from i
 ##Installation
 Installation is
 
-##Usage
+## Usage
 
-###Whitebalancing
+### Whitebalancing
 
-###Segmentation
+### Segmentation
 
-###Vegetation index extraction
+### Vegetation index extraction
 
-##Citation
+## Citation
