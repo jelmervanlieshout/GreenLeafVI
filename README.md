@@ -13,8 +13,16 @@ RGB vegetation indices have been used in many species. Our plugin has been teste
 ### Whitebalancing
 Images may suffer from inconsistent lighting, especially when taken at different points of time. Whitebalancing is an image transformation method that can help make different images more comparable to each other. We provide a script in which the user selects a white reference surface and its RGB value is compared to perfect RGB white (#255,#255,#255). The ratio of the selected surface RGB and perfect white RGB values is used to transform the red, green and blue channel separately, followed by merging of each channel to end with a more balanced image. Currently the script provides two whitebalancing options;
 
-1. **Per image:** This option requires users to select white reference surface for each image individually.
-2. **Batch:** This asks the user to open a reference image and select the area to use as white balancing reference. The same area will be considered the reference area in each image. Make sure that this area is the same in each image.
+#### Step-by-step whitebalancing
+1. **Input files directory**: Select the directory with images you want to whitebalance.
+2. **Output files directory**: Select the directory you want to save your images in.
+3. **Input file extension**: Select the file extension of your input images (This is case-sensitive).
+4. **Output file extension**: Select the file extension of your output images (This is case-sensitive).
+5. **Mode**: Either; **Single** for per image whitebalancing, or **Batch** for whitebalancing of the whole input directory.
+
+**Single:** The script will open each image individually and requires users to **select** a white reference area using the rectangle tool and **click** *ok*.
+
+**Batch:** The script will ask to open a reference image. **Select** a white reference area using the rectangle tool and **click** *ok*. The same area location will be used as reference for each image in the input directory.
 
 ### Segmentation
 
