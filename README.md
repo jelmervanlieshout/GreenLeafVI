@@ -73,6 +73,7 @@ The final step includes splitting the RGB image into its three channels and sele
 |Top left y|Top left most y-axis pixel value of roi|
 |Bottom right x|Bottom right most x-axis pixel value of roi|
 |Bottom right y|Bottom right most y-axis pixel value of roi|
+
 *R = mean red grey value, G = mean green grey value, B = mean blue grey value
 **Rn = Red_norm, Gn = Green_norm, Bn = Blue_norm 
 
