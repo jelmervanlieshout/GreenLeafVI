@@ -46,5 +46,5 @@ The final step includes splitting the RGB image into its three channels and sele
 |Column Name|Definition|
 |-----------|----------|
 |Image name |Image name|
-
+|Roi|The roi number within the image selected|
 ## Citation
