@@ -85,3 +85,5 @@ The final step includes splitting the RGB image into its three channels and sele
 
 ## Citation
 Manuscript is currently in preparation. Please don't publish anything without our permission.
+
+## Contributors
