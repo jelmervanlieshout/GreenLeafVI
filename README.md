@@ -43,5 +43,8 @@ To accurately measure the mean RGB values for the desired objects, it is recomme
 The final step includes splitting the RGB image into its three channels and selecting the region-of-interest (roi), based on the object's blue channel value. Subsequently, the **mean grey value** is extracted for each object in each channel individually. These grey values are entered in a table with a number of vegetation indices and the x and y coördinates of each object in a tidy format. The table is opened within FIJI and saved in the input directory as a *.csv* format.
 
 #### Overview Vegetation index output
+|Column Name|Definition|
+|-----------|----------|
+|Image name |Image name|
 
 ## Citation
