@@ -8,9 +8,10 @@ Repository for the FIJI GreenLeafVI plugin which aims to extract RGB data from i
 If GreenLeafVI cannot be found in the **Manage Update Sites** menu, click **Add Unlisted Site**, type GreenLeafVI under **Name** and type **https://sites.imagej.net/GreenLeafVI/**. Click **Apply and Close** and restart FIJI. The plugin should be under **Plugins --> GreenLeafVI**.
 
 ## Usage
-RGB vegetation indices have been used in many species. Our plugin has been tested in leaf tissue of *Arabidopsis thaliana* (Arabidopsis), *Nicothiana benthamiana* (Tobacco), *Solanum lycopersicum* (Tomato) and *Lactuca sativa* (Lettuce). Normalized red was the best predictor of chlorophyll content in all species, apart from lettuce, where Green:Red ratio performed the best. For other species, we recommend to test the available vegetation indices with classical chlorophyll extraction methods to identify the best method.
+RGB vegetation indices have been used in many species. Our plugin has been tested in leaf tissue of *Arabidopsis thaliana* (Arabidopsis), *Nicothiana benthamiana* (Tobacco), *Solanum lycopersicum* (Tomato) and *Lactuca sativa* (Lettuce). Normalized red was the best predictor of chlorophyll content in all species, apart from lettuce, where Green:Red ratio performed the best. For other species, we recommend to test the available vegetation indices with classical chlorophyll extraction methods to identify the best method. We recommend using the **whitebalancing** and **segmentation** options before extracting RGB values, but direct RGB value extraction is possible, provided that variation between images is minimal and the desired object is clearly distinguishable from the background.
 
 ### Image acquisition
+Proper imaging, pre-processing and data analysis is essential to for accurate Vegetation Index prediction. Our method requires images in a format that contains RGB data and can be read by FIJI. Moreover, it's important to minimize the variation between images by imaging in constant lighting. Furthermore, even though our plugin allows for post-imaging **whitebalancing**, most cameras provide this option themself and may result in more accurate data analysis. Finally, our method requires objects to be clearly distinguishable from the background. Our **segmentation** method has been tested on images using either a white or black background.
 
 ### Whitebalancing
 Images may suffer from inconsistent lighting, especially when taken at different points of time. Whitebalancing is an image transformation method that can help make different images more comparable to each other. We provide a script in which the user selects a white reference surface and its RGB value is compared to perfect RGB white (#255,#255,#255). The ratio of the selected surface RGB and perfect white RGB values is used to transform the red, green and blue channel separately, followed by merging of each channel to end with a more balanced image.
@@ -29,7 +30,7 @@ Images may suffer from inconsistent lighting, especially when taken at different
 ### Segmentation
 To accurately measure the mean RGB values for the desired objects, it is recommended to remove the background of each image. The segmentation script creates a duplicate image and uses the FIJI **Image --> Adjust --> Color threshold** function to select desired objects based on minimum and maximum HSB (Hue, saturation and brightness) values. A mask is created and the selection is overlayed on the original image, followed by background removal.
 
-####Step-by-step segmentation
+#### Step-by-step segmentation
 1. **Input files directory**: Select the directory with images you want to whitebalance.
 2. **Output files directory**: Select the directory you want to save your images in.
 3. **Input file extension**: Select the file extension of your input images (This is case-sensitive).
@@ -39,5 +40,8 @@ To accurately measure the mean RGB values for the desired objects, it is recomme
 7. **Save**: Saves the used HSB values as a table in *.csv* format in the input directory (only when the option **New** was used).
 
 ### Vegetation index extraction
+The final step includes splitting the RGB image into its three channels and selecting the region-of-interest (roi), based on the object's blue channel value. Subsequently, the **mean grey value** is extracted for each object in each channel individually. These grey values are entered in a table with a number of vegetation indices and the x and y coördinates of each object in a tidy format. The table is opened within FIJI and saved in the input directory as a *.csv* format.
+
+#### Overview Vegetation index output
 
 ## Citation
