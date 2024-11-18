@@ -43,8 +43,36 @@ To accurately measure the mean RGB values for the desired objects, it is recomme
 The final step includes splitting the RGB image into its three channels and selecting the region-of-interest (roi), based on the object's blue channel value. Subsequently, the **mean grey value** is extracted for each object in each channel individually. These grey values are entered in a table with a number of vegetation indices and the x and y coördinates of each object in a tidy format. The table is opened within FIJI and saved in the input directory as a *.csv* format.
 
 #### Overview Vegetation index output
-|Column Name|Definition|
+|Column Name|Definition*|
 |-----------|----------|
 |Image name |Image name|
 |Roi|The roi number within the image selected|
+|Area|The roi area in number of pixels|
+|Red_mean|Mean red grey value measured|
+|Red_min|Minimum red grey value measured|
+|Red_max|Maximum red grey value measured|
+|Red_median|Median red grey value measured|
+|Green_mean|Mean green grey value measured|
+|Green_min|Minimum green grey value measured|
+|Green_max|Maximum green grey value measured|
+|Green_median|Median green grey value measured|
+|Blue_mean|Mean blue grey value measured|
+|Blue_min|Minimum blue grey value measured|
+|Blue_max|Maximum blue grey value measured|
+|Blue_median|Median blue grey value measured|
+|GR_ratio|G/R|
+|RG_ratio|R/G|
+|Kawashima|(R-B)/(R+B)|
+|NDI**|(Rn-Gn)/(Rn+Gn+0.01)|
+|GLI|(2G-R-B)/(2G+R+B)|
+|Red_norm|R/(R+G+B)|
+|Green_norm|G/(R+G+B)|
+|Blue_norm|B/(R+G+B)|
+|Woebbecke|(G-B)/(R-G)|
+|Top left x|Top left most x-axis pixel value of roi|
+|Top left y|Top left most y-axis pixel value of roi|
+|Bottom right x|Bottom right most x-axis pixel value of roi|
+|Bottom right y|Bottom right most y-axis pixel value of roi|
+
 ## Citation
+Manuscript is currently in preparation. Please don't publish anything without our permission.
