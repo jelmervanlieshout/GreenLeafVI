@@ -33,6 +33,8 @@ Images may suffer from inconsistent lighting, especially when taken at different
 To accurately measure the mean RGB values for the desired objects, it is recommended to remove the background of each image. The segmentation script creates a duplicate image and uses the FIJI **Image --> Adjust --> Color threshold** function to select desired objects based on minimum and maximum HSB (Hue, saturation and brightness) values. A mask is created and the selection is overlayed on the original image, followed by background removal.
 
 #### Step-by-step segmentation
+<img align = "right" src = Screenshot_segmentation.png>
+
 1. **Input files directory**: Select the directory with images you want to whitebalance.
 2. **Output files directory**: Select the directory you want to save your images in.
 3. **Input file extension**: Select the file extension of your input images (This is case-sensitive).
