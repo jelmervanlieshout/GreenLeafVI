@@ -16,8 +16,6 @@ Proper imaging, pre-processing and data analysis is essential to for accurate Ve
 ### Whitebalancing
 Images may suffer from inconsistent lighting, especially when taken at different points of time. Whitebalancing is an image transformation method that can help make different images more comparable to each other. We provide a script in which the user selects a white reference surface and its RGB value is compared to perfect RGB white (#255,#255,#255). The ratio of the selected surface RGB and perfect white RGB values is used to transform the red, green and blue channel separately, followed by merging of each channel to end with a more balanced image.
 
-![Screenshot_whitebalance](https://github.com/user-attachments/assets/312ea707-aa38-4418-ad1b-69177cf89d11)
-
 #### Step-by-step whitebalancing
 1. **Input files directory**: Select the directory with images you want to whitebalance.
 2. **Output files directory**: Select the directory you want to save your images in.
