@@ -14,8 +14,6 @@ RGB vegetation indices have been used in many species. Our plugin has been teste
 Proper imaging, pre-processing and data analysis is essential to for accurate Vegetation Index prediction. Our method requires images in a format that contains RGB data and can be read by FIJI. Moreover, it's important to minimize the variation between images by imaging in constant lighting. Furthermore, even though our plugin allows for post-imaging **whitebalancing**, most cameras provide this option themself and may result in more accurate data analysis. Finally, our method requires objects to be clearly distinguishable from the background. Our **segmentation** method has been tested on images using either a white or black background.
 
 ### Whitebalancing
-<img align = "right" src = ![Screenshot_whitebalance](https://github.com/user-attachments/assets/3aa39b29-b74e-4b1e-b67e-08db2c0faf30) >
-
 Images may suffer from inconsistent lighting, especially when taken at different points of time. Whitebalancing is an image transformation method that can help make different images more comparable to each other. We provide a script in which the user selects a white reference surface and its RGB value is compared to perfect RGB white (#255,#255,#255). The ratio of the selected surface RGB and perfect white RGB values is used to transform the red, green and blue channel separately, followed by merging of each channel to end with a more balanced image.
 
 #### Step-by-step whitebalancing
