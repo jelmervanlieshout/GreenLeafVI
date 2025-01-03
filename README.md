@@ -95,6 +95,6 @@ The final step includes splitting the RGB image into its three channels and sele
 Manuscript is currently in preparation. Please don't publish anything without our permission.
 
 ## Contributors
-Thalia Luden < br/>
-Jelmer van Lieshout < br/>
+Thalia Luden <br/>
+Jelmer van Lieshout <br/>
 Joost Willemse
