@@ -10,6 +10,8 @@ If GreenLeafVI cannot be found in the **Manage Update Sites** menu, click **Add 
 ## Usage
 RGB vegetation indices have been used in many species. Our plugin has been tested in leaf tissue of *Arabidopsis thaliana* (Arabidopsis), *Nicothiana benthamiana* (Tobacco), *Solanum lycopersicum* (Tomato) and *Lactuca sativa* (Lettuce). Normalized red was the best predictor of chlorophyll content in all species, apart from lettuce, where Green:Red ratio performed the best. For other species, we recommend to test the available vegetation indices with classical chlorophyll extraction methods to identify the best method. We recommend using the **whitebalancing** and **segmentation** options before extracting RGB values, but direct RGB value extraction is possible, provided that variation between images is minimal and the desired object is clearly distinguishable from the background.
 
+<img align = "middle" src =Overview_plugin.png>
+
 ### Image acquisition
 Proper imaging, pre-processing and data analysis is essential to for accurate Vegetation Index prediction. Our method requires images in a format that contains RGB data and can be read by FIJI. Moreover, it's important to minimize the variation between images by imaging in constant lighting. Furthermore, even though our plugin allows for post-imaging **whitebalancing**, most cameras provide this option themself and may result in more accurate data analysis. Finally, our method requires objects to be clearly distinguishable from the background. Our **segmentation** method has been tested on images using either a white or black background.
 
